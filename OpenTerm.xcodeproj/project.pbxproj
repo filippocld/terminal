@@ -10,6 +10,9 @@
 		1C81BE5720225C3800D07301 /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C81BE5620225C3800D07301 /* Clipboard.swift */; };
 		228541D8201FB62C00B93589 /* libfiles.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228541D7201FB62C00B93589 /* libfiles.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22854240201FC4E700B93589 /* libtar.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2285423F201FC4E700B93589 /* libtar.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		229EC3F520265405004E76C6 /* libnetwork_ios.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 229EC3F420265405004E76C6 /* libnetwork_ios.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		229EC3F62026547B004E76C6 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; };
+		229EC3F72026547B004E76C6 /* ios_system.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22AC09DC202056D6006F7D8B /* libcurl.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22AC09DB202056D6006F7D8B /* libcurl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22D56F8B200268E90090C1F6 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22F5682A2020CA2E009850FD /* libshell.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22F568242020CA2E009850FD /* libshell.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -67,6 +70,8 @@
 				22F5682C2020CA2E009850FD /* libawk.dylib in Embed Frameworks */,
 				22AC09DC202056D6006F7D8B /* libcurl.dylib in Embed Frameworks */,
 				228541D8201FB62C00B93589 /* libfiles.dylib in Embed Frameworks */,
+				229EC3F72026547B004E76C6 /* ios_system.framework in Embed Frameworks */,
+				229EC3F520265405004E76C6 /* libnetwork_ios.dylib in Embed Frameworks */,
 				22D56F8B200268E90090C1F6 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -79,6 +84,7 @@
 		228541D7201FB62C00B93589 /* libfiles.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfiles.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		228541DC201FB78200B93589 /* ios_system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ios_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2285423F201FC4E700B93589 /* libtar.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtar.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		229EC3F420265405004E76C6 /* libnetwork_ios.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnetwork_ios.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AC09DB202056D6006F7D8B /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F568242020CA2E009850FD /* libshell.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libshell.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F568252020CA2E009850FD /* libssh_cmd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssh_cmd.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +145,7 @@
 				BE000C081FEC4F6C00D06B91 /* ios_system.framework in Frameworks */,
 				BE000C091FEC4F6F00D06B91 /* ios_system.framework in Frameworks */,
 				5A38CC73C499E1A878353871 /* Pods_OpenTerm.framework in Frameworks */,
+				229EC3F62026547B004E76C6 /* ios_system.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +226,7 @@
 		BE3808491FD9BFB600393EB8 = {
 			isa = PBXGroup;
 			children = (
+				229EC3F420265405004E76C6 /* libnetwork_ios.dylib */,
 				22F5682D2020CA66009850FD /* libtext.dylib */,
 				22F568272020CA2E009850FD /* libawk.dylib */,
 				22F568282020CA2E009850FD /* libcurl.dylib */,
