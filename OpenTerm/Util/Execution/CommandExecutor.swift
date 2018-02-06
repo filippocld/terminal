@@ -78,7 +78,7 @@ class CommandExecutor {
             /// Save return code into the context
             self.context[.status] = "\(returnCode)"
 
-            // Write the end code to stdout
+            // Write the end code to stdout_pipe
             // TODO: Also need to send to stderr?
             self.stdout_pipe.fileHandleForWriting.write(String(CommandExecutor.endCtrlCode).data(using: .utf8)!)
         }
