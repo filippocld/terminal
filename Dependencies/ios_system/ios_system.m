@@ -35,6 +35,7 @@ extern __thread int    __db_getopt_reset;
 __thread FILE* thread_stdin;
 __thread FILE* thread_stdout;
 __thread FILE* thread_stderr;
+pthread_t current_command_root_thread;
 
 typedef struct _functionParameters {
     int argc;
@@ -47,7 +48,7 @@ typedef struct _functionParameters {
 } functionParameters;
 
 static void cleanup_function(void* parameters) {
-    // This function is called when pthread_exit() is called
+    // This function is called when pthread_exit() or ios_kill() is called
     functionParameters *p = (functionParameters *) parameters;
     fflush(thread_stdout);
     fflush(thread_stderr);
@@ -121,6 +122,8 @@ void initializeEnvironment() {
     setenv("APPDIR", [[NSBundle mainBundle] resourcePath].UTF8String, 1);
     setenv("TERM", "xterm", 1); // 1 = override existing value
     setenv("TMPDIR", NSTemporaryDirectory().UTF8String, 0); // tmp directory
+    setenv("CLICOLOR", "", 0);
+    setenv("LSCOLORS", "ExFxBxDxCxegedabagacad", 0); // colors for ls on black background
     
     // We can't write in $HOME so we need to set the position of config files:
     setenv("SSH_HOME", docsPath.UTF8String, 0);  // SSH keys in ~/Documents/.ssh/ or [Cloud Drive]/.ssh
@@ -549,6 +552,15 @@ int ios_dup2(int fd1, int fd2)
     return fd2;
 }
 
+int ios_kill()
+{
+    if (current_command_root_thread > 0) {
+        // Send pthread_kill with the given signal to the current main thread, if there is one.
+        return pthread_cancel(current_command_root_thread);
+    }
+    // No process running
+    return ESRCH;
+}
 
 
 // For customization:
@@ -950,11 +962,13 @@ int ios_system(const char* inputCmd) {
                 [fileCoordinator coordinateWritingItemAtURL:currentURL options:0 error:NULL byAccessor:^(NSURL *currentURL) {
                     isMainThread = false;
                     pthread_create(&_tid, NULL, run_function, params);
+                    current_command_root_thread = _tid;
                     // Wait for this process to finish:
                     pthread_join(_tid, NULL);
                     // If there are auxiliary process, also wait for them:
                     if (lastThreadId > 0) pthread_join(lastThreadId, NULL);
                     lastThreadId = 0;
+                    current_command_root_thread = 0;
                     isMainThread = true;
                 }];
             } else {
