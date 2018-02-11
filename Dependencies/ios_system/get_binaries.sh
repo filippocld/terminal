@@ -8,7 +8,7 @@ HHROOT="https://github.com/holzschu"
 # ios_system
 echo "Downloading ios_system.framework.zip"
 curl -OL $HHROOT/ios_system/releases/download/v$IOS_SYSTEM_VER/release.tar.gz
-( tar -xzf release.tar.gz && rm release.tar.gz && mv release/* . ) || { echo "ios_system failed to download"; exit 1; }
+( tar -xzf release.tar.gz --strip 1 && rm release.tar.gz ) || { echo "ios_system failed to download"; exit 1; }
 )
 
 
