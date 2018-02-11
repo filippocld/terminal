@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1C81BE5720225C3800D07301 /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C81BE5620225C3800D07301 /* Clipboard.swift */; };
+		2206C539202F9CC80041D005 /* libssh2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2206C537202F9CC80041D005 /* libssh2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2206C53A202F9CC80041D005 /* openssl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2206C538202F9CC80041D005 /* openssl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		228541D8201FB62C00B93589 /* libfiles.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228541D7201FB62C00B93589 /* libfiles.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22854240201FC4E700B93589 /* libtar.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2285423F201FC4E700B93589 /* libtar.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		229EC3CE2024537D004E76C6 /* PanelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229EC3CD2024537C004E76C6 /* PanelKit.framework */; };
-		229EC3CF20245527004E76C6 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; };
-		229EC3D020245527004E76C6 /* ios_system.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		229EC3F520265405004E76C6 /* libnetwork_ios.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 229EC3F420265405004E76C6 /* libnetwork_ios.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		229EC3F62026547B004E76C6 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; };
 		229EC3F72026547B004E76C6 /* ios_system.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22AC09DC202056D6006F7D8B /* libcurl.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22AC09DB202056D6006F7D8B /* libcurl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		22D56F8B200268E90090C1F6 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22F5682A2020CA2E009850FD /* libshell.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22F568242020CA2E009850FD /* libshell.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22F5682B2020CA2E009850FD /* libssh_cmd.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22F568252020CA2E009850FD /* libssh_cmd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22F5682C2020CA2E009850FD /* libawk.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22F568272020CA2E009850FD /* libawk.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -38,8 +37,6 @@
 		3CE5764820226A1500760E43 /* ANSITextState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5764720226A1500760E43 /* ANSITextState.swift */; };
 		3CE5764A20226D8900760E43 /* String+ANSIFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5764920226D8900760E43 /* String+ANSIFormatting.swift */; };
 		5A38CC73C499E1A878353871 /* Pods_OpenTerm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC01604DAC695ABD64544260 /* Pods_OpenTerm.framework */; };
-		BE000C081FEC4F6C00D06B91 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3768EE1FEC4DCE00D5A2D1 /* ios_system.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		BE000C091FEC4F6F00D06B91 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3768EE1FEC4DCE00D5A2D1 /* ios_system.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		BE165408201909040067EC92 /* xCallBackUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE165407201909030067EC92 /* xCallBackUrl.swift */; };
 		BE244DC8201FBB6000A7EA4E /* cacert.pem in Resources */ = {isa = PBXBuildFile; fileRef = BE244DC7201FBB6000A7EA4E /* cacert.pem */; };
 		BE3808561FD9BFB600393EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3808551FD9BFB600393EB8 /* AppDelegate.swift */; };
@@ -68,6 +65,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2206C539202F9CC80041D005 /* libssh2.framework in Embed Frameworks */,
+				2206C53A202F9CC80041D005 /* openssl.framework in Embed Frameworks */,
 				22F5682E2020CA67009850FD /* libtext.dylib in Embed Frameworks */,
 				22F5682A2020CA2E009850FD /* libshell.dylib in Embed Frameworks */,
 				22F5682B2020CA2E009850FD /* libssh_cmd.dylib in Embed Frameworks */,
@@ -77,9 +76,6 @@
 				228541D8201FB62C00B93589 /* libfiles.dylib in Embed Frameworks */,
 				229EC3F72026547B004E76C6 /* ios_system.framework in Embed Frameworks */,
 				229EC3F520265405004E76C6 /* libnetwork_ios.dylib in Embed Frameworks */,
-				22D56F8B200268E90090C1F6 /* (null) in Embed Frameworks */,
-				22D56F8B200268E90090C1F6 /* (null) in Embed Frameworks */,
-				229EC3D020245527004E76C6 /* ios_system.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +84,8 @@
 
 /* Begin PBXFileReference section */
 		1C81BE5620225C3800D07301 /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
+		2206C537202F9CC80041D005 /* libssh2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libssh2.framework; path = Dependencies/libssh2.framework; sourceTree = "<group>"; };
+		2206C538202F9CC80041D005 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = openssl.framework; path = Dependencies/openssl.framework; sourceTree = "<group>"; };
 		228541D7201FB62C00B93589 /* libfiles.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libfiles.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		228541DC201FB78200B93589 /* ios_system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ios_system.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2285423F201FC4E700B93589 /* libtar.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtar.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,9 +150,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE000C081FEC4F6C00D06B91 /* ios_system.framework in Frameworks */,
-				BE000C091FEC4F6F00D06B91 /* ios_system.framework in Frameworks */,
-				229EC3CF20245527004E76C6 /* ios_system.framework in Frameworks */,
 				229EC3CE2024537D004E76C6 /* PanelKit.framework in Frameworks */,
 				5A38CC73C499E1A878353871 /* Pods_OpenTerm.framework in Frameworks */,
 				229EC3F62026547B004E76C6 /* ios_system.framework in Frameworks */,
@@ -247,6 +242,8 @@
 		BE3808491FD9BFB600393EB8 = {
 			isa = PBXGroup;
 			children = (
+				2206C537202F9CC80041D005 /* libssh2.framework */,
+				2206C538202F9CC80041D005 /* openssl.framework */,
 				229EC3F420265405004E76C6 /* libnetwork_ios.dylib */,
 				22F5682D2020CA66009850FD /* libtext.dylib */,
 				22F568272020CA2E009850FD /* libawk.dylib */,
