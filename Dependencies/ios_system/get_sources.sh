@@ -29,6 +29,7 @@ curl https://opensource.apple.com/tarballs/libutil/$libutil.tar.gz -O
 tar xfz $libutil.tar.gz
 rm $libutil.tar.gz
 mv $libutil libutil
+(cd libutil ; patch -p1 < ../libutil.patch ; cd ..)
 
 # get source for libInfo:
 echo "Getting libinfo"
@@ -66,5 +67,4 @@ tar xfz $curl.tar.gz
 rm $curl.tar.gz
 mv $curl curl
 (cd curl ; patch -p1 < ../curl.patch ; cd ..)
-
 
