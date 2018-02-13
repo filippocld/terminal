@@ -16,20 +16,22 @@ public func shareFile(argc: Int32, argv: UnsafeMutablePointer<UnsafeMutablePoint
 
 	// share text from stdin when present
 	var bytes = [Int8]()
-	while true {
-		var byte: Int8 = 0
-		let count = read(fileno(thread_stdin), &byte, 1)
-		guard count == 1 else { break }
-		bytes.append(byte)
-	}
-	let data = Data(bytes: bytes, count: bytes.count)
-	if data.count > 0 {
-		let string = String(data: data, encoding: .utf8) ?? ""
-		if string.isEmpty {
-			fputs("Unable to read string from standard input\n", thread_stderr)
-			return 1
+	if (stdin != thread_stdin) {
+		while true {
+			var byte: Int8 = 0
+			let count = read(fileno(thread_stdin), &byte, 1)
+			guard count == 1 else { break }
+			bytes.append(byte)
 		}
-		itemsToShare.append(string)
+		let data = Data(bytes: bytes, count: bytes.count)
+		if data.count > 0 {
+			let string = String(data: data, encoding: .utf8) ?? ""
+			if string.isEmpty {
+				fputs("Unable to read string from standard input\n", thread_stderr)
+				return 1
+			}
+			itemsToShare.append(string)
+		}
 	}
 
 	// all arguments are files we want to share
