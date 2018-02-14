@@ -10,10 +10,10 @@
 		1C81BE5720225C3800D07301 /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C81BE5620225C3800D07301 /* Clipboard.swift */; };
 		2206C539202F9CC80041D005 /* libssh2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2206C537202F9CC80041D005 /* libssh2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2206C53A202F9CC80041D005 /* openssl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2206C538202F9CC80041D005 /* openssl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		223A3E2920339571004C9F62 /* libnetwork_ios.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 229EC3F420265405004E76C6 /* libnetwork_ios.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		228541D8201FB62C00B93589 /* libfiles.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228541D7201FB62C00B93589 /* libfiles.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22854240201FC4E700B93589 /* libtar.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2285423F201FC4E700B93589 /* libtar.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		229EC3CE2024537D004E76C6 /* PanelKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 229EC3CD2024537C004E76C6 /* PanelKit.framework */; };
-		229EC3CF20245527004E76C6 /* ios_system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; };
 		229EC3D020245527004E76C6 /* ios_system.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228541DC201FB78200B93589 /* ios_system.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		22AC09DC202056D6006F7D8B /* libcurl.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22AC09DB202056D6006F7D8B /* libcurl.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		22F5682A2020CA2E009850FD /* libshell.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 22F568242020CA2E009850FD /* libshell.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -79,6 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				223A3E2920339571004C9F62 /* libnetwork_ios.dylib in Embed Frameworks */,
 				2206C539202F9CC80041D005 /* libssh2.framework in Embed Frameworks */,
 				2206C53A202F9CC80041D005 /* openssl.framework in Embed Frameworks */,
 				22F5682E2020CA67009850FD /* libtext.dylib in Embed Frameworks */,
@@ -88,7 +89,6 @@
 				22F5682C2020CA2E009850FD /* libawk.dylib in Embed Frameworks */,
 				22AC09DC202056D6006F7D8B /* libcurl.dylib in Embed Frameworks */,
 				228541D8201FB62C00B93589 /* libfiles.dylib in Embed Frameworks */,
-				22D56F8B200268E90090C1F6 /* (null) in Embed Frameworks */,
 				229EC3D020245527004E76C6 /* ios_system.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -173,7 +173,6 @@
 			files = (
 				229EC3CE2024537D004E76C6 /* PanelKit.framework in Frameworks */,
 				5A38CC73C499E1A878353871 /* Pods_OpenTerm.framework in Frameworks */,
-				229EC3F62026547B004E76C6 /* ios_system.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
